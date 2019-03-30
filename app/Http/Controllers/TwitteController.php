@@ -16,6 +16,6 @@ class TwitteController extends Controller
 
     public function index()
     {
-        $this->twitte->index();
+        return $this->twitte->index();
     }
 }

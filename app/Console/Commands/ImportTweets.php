@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Repositories\TwitteRepository;
 
 class ImportTweets extends Command
 {
@@ -18,7 +19,7 @@ class ImportTweets extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'import 50 first twittes from bill gates.';
 
     /**
      * Create a new command instance.
@@ -37,6 +38,9 @@ class ImportTweets extends Command
      */
     public function handle()
     {
-        //
+        $twittes = new TwitteRepository();
+        $twittes->index();
+
+        $this->info('Done!');
     }
 }

@@ -31,29 +31,30 @@ class TwitteRepository
         foreach($tweets as $tweet)
         {
             $this->twitte = new Twitte();
-            $this->twitte->id = $tweet->id;
-            $this->twitte->created = $tweet->created_at;
-            $this->twitte->id_str = $tweet->id_str;
-            $this->twitte->text = $tweet->text;
-            $this->twitte->truncated = $tweet->truncated;
-            $this->twitte->source = $tweet->source;
-            $this->twitte->in_reply_to_status_id = $tweet->in_reply_to_status_id;
-            $this->twitte->in_reply_to_status_id_str = $tweet->in_reply_to_status_id_str;
-            $this->twitte->in_reply_to_user_id = $tweet->in_reply_to_user_id;
-            $this->twitte->in_reply_to_user_id_str = $tweet->in_reply_to_user_id_str;
-            $this->twitte->in_reply_to_screen_name = $tweet->in_reply_to_screen_name;
-            $this->twitte->geo = $tweet->geo;
-            $this->twitte->coordinates = $tweet->coordinates;
-            $this->twitte->place = $tweet->place;
-            $this->twitte->contributors = $tweet->contributors;
-            $this->twitte->is_quote_status = $tweet->is_quote_status;
-            $this->twitte->retweet_count = $tweet->retweet_count;
-            $this->twitte->favorite_count = $tweet->favorite_count;
-            $this->twitte->favorited = $tweet->favorited;
-            $this->twitte->retweeted = $tweet->retweeted;
-            $this->twitte->possibly_sensitive = $tweet->possibly_sensitive;
-            $this->twitte->lang = $tweet->lang;
+            $this->twitte->id = isset($tweet->id) ? $tweet->id : '';
+            $this->twitte->created = isset($tweet->created_at)  ? $tweet->created_at : '';
+            $this->twitte->id_str = isset($tweet->id_str) ? $tweet->id_str : '';
+            $this->twitte->text = isset($tweet->text) ? $tweet->text : '';
+            $this->twitte->truncated = isset($tweet->truncated) ? $tweet->truncated : 0;
+            $this->twitte->source = isset($tweet->source) ? $tweet->source : '';
+            $this->twitte->in_reply_to_status_id = isset($tweet->in_reply_to_status_id) ? $tweet->in_reply_to_status_id : null;
+            $this->twitte->in_reply_to_status_id_str = isset($tweet->in_reply_to_status_id_str) ? $tweet->in_reply_to_status_id_str : null;
+            $this->twitte->in_reply_to_user_id = isset($tweet->in_reply_to_user_id) ? $tweet->in_reply_to_user_id : null;
+            $this->twitte->in_reply_to_user_id_str = isset($tweet->in_reply_to_user_id_str) ? $tweet->in_reply_to_user_id_str : null;
+            $this->twitte->in_reply_to_screen_name = isset($tweet->in_reply_to_screen_name) ? $tweet->in_reply_to_screen_name : null;
+            $this->twitte->geo = isset($tweet->geo) ? $tweet->geo : null;
+            $this->twitte->coordinates = isset($tweet->coordinates) ? $tweet->coordinates : null;
+            $this->twitte->place = isset($tweet->place) ? $tweet->place : null;
+            $this->twitte->contributors = isset($tweet->contributors) ? $tweet->contributors : null;
+            $this->twitte->is_quote_status = isset($tweet->is_quote_status) ? $tweet->is_quote_status : false;
+            $this->twitte->retweet_count = isset($tweet->retweet_count) ? $tweet->retweet_count : 0;
+            $this->twitte->favorite_count = isset($tweet->favorite_count) ? $tweet->favorite_count : 0;
+            $this->twitte->favorited = isset($tweet->favorited) ? $tweet->favorited : false;
+            $this->twitte->retweeted = isset($tweet->retweeted) ? $tweet->retweeted : false;
+            $this->twitte->possibly_sensitive = isset($tweet->possibly_sensitive) ? $tweet->possibly_sensitive : false;
+            $this->twitte->lang = isset($tweet->lang) ? $tweet->lang : 'en';
             $this->twitte->save();
         }
+
     }
 }
