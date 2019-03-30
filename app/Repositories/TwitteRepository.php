@@ -69,7 +69,7 @@ class TwitteRepository
     {
         $date_test_seven = '2019-03-19';
         $date_test_two = '2019-03-24';
-
+        
         if($order != null)
         {
             if($orderBy == 'likes')
@@ -97,17 +97,17 @@ class TwitteRepository
         {
             if($orderBy == 'likes')
             {
-                $tweetes = Twitte::where('favorite_count' > 3000)->where('retweet_count' < 2500)->orderBy('favorite_count', $order)->get();
+                $tweetes = Twitte::where('favorite_count', '>', 3000)->where('retweet_count', '<', 2500)->orderBy('favorite_count', $order)->get();
             }   
             else
             {
-                $tweetes = Twitte::where('favorite_count' > 3000)->where('retweet_count' < 2500)->orderBy('retweet_count', $order)->get();
+                $tweetes = Twitte::where('favorite_count', '>', 3000)->where('retweet_count', '<', 2500)->orderBy('retweet_count', $order)->get();
             }
         
         }
         else
         {
-            $tweetes = Twitte::where('favorite_count' > 3000)->where('retweet_count' < 2500)->get();
+            $tweetes = Twitte::where('favorite_count', '>', 3000)->where('retweet_count', '<', 2500)->get();
         }
         
         return $tweetes->toJson();
@@ -149,17 +149,19 @@ class TwitteRepository
         {
             if($orderBy == 'likes')
             {
-                $tweetes = Twitte::where('place', '!=', null)->orderBy('favorite_count', $order)->get();
+                $tweetes = Twitte::where('place', '!=', null)->orderBy('favorite_count', $order)->select('place')->distinct()->get();
             }
             else
             {
-                $tweetes = Twitte::where('place', '!=', null)->orderBy('retweet_count', $order)->get();
+                $tweetes = Twitte::where('place', '!=', null)->orderBy('retweet_count', $order)->select('place')->distinct()->get();
             }
-
-            $tweetes = Twitte::where('place', '!=', null)->get();
+        }
+        else
+        {
+            $tweetes = Twitte::where('place', '!=', null)->select('place')->distinct()->get();
         }
         
-        if($tweetes == [])
+        if(isset($tweetes))
         {
             return 'Sem localização';
         }

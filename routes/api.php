@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['as' => 'api'], function () {
     Route::get('/tweets/7dias/{order?}/{order_by?}', 'TwitteController@beforeSevenDays'); 
-    Route::get('/tweets/likes/rt/{order?}/{order_by?}', 'TwitteController@beforeSevenDays'); 
+    Route::get('/tweets/likes/rt/{order?}/{order_by?}', 'TwitteController@moreThan3000lessThan2500'); 
     Route::get('/tweets/rt/{order?}/{order_by?}', 'TwitteController@moreRT'); 
     Route::get('/tweets/locale/{order?}/{order_by?}', 'TwitteController@locale'); 
 });
