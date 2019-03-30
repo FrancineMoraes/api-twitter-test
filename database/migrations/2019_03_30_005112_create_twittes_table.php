@@ -15,27 +15,28 @@ class CreateTwittesTable extends Migration
     {
         Schema::create('twittes', function (Blueprint $table) {
             $table->bigInteger('id');
-            $table->string('created_at');
+            $table->string('created');
             $table->string('id_str');
             $table->longText('text');
             $table->boolean('truncated');
             $table->string('source');
-            $table->string('in_reply_to_status_id');
-            $table->string('in_reply_to_status_id_str');
-            $table->string('in_reply_to_user_id');
-            $table->string('in_reply_to_user_id_str');
-            $table->string('in_reply_to_screen_name');
-            $table->string('geo');
-            $table->string('coordinates');
-            $table->string('place');
-            $table->string('contributors');
+            $table->string('in_reply_to_status_id')->nullable();
+            $table->string('in_reply_to_status_id_str')->nullable();
+            $table->string('in_reply_to_user_id')->nullable();
+            $table->string('in_reply_to_user_id_str')->nullable();
+            $table->string('in_reply_to_screen_name')->nullable();
+            $table->string('geo')->nullable();
+            $table->string('coordinates')->nullable();
+            $table->string('place')->nullable();
+            $table->string('contributors')->nullable();
             $table->boolean('is_quote_status');
             $table->integer('retweet_count');
             $table->integer('favorite_count');
             $table->boolean('favorited');
             $table->boolean('retweeted');
             $table->boolean('possibly_sensitive');
-            $table->string('lang');
+            $table->string('lang')->default('en');
+            $table->timestamps();
         });
     }
 
