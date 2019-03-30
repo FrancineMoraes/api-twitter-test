@@ -18,7 +18,7 @@ mais antigos.
 
  2. Retorne todos os tweets que possuam mais de 3000 likes mas menos de 2500RTs.
 
-**Rota: /tweets/rt/{order?}/{order_by?**
+**Rota: /tweets/rt/{order?}/{order_by}?**
 
  3. Retorne todas as localidades únicas dos tweets que estejam disponíveis na
 sua extração. Se houverem tweets sem localização, o termo "Sem Localização" é o
