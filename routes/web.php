@@ -11,4 +11,3 @@
 |
 */
 
-Route::get('/', 'TwitteController@index');

@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['as' => 'api'], function () {
+    Route::get('/tweets/7dias/{order?}/{order_by?}', 'TwitteController@beforeSevenDays'); 
+    Route::get('/tweets/likes/rt/{order?}/{order_by?}', 'TwitteController@beforeSevenDays'); 
+    Route::get('/tweets/rt/{order?}/{order_by?}', 'TwitteController@moreRT'); 
+    Route::get('/tweets/locale/{order?}/{order_by?}', 'TwitteController@locale'); 
 });
+
