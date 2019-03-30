@@ -1,0 +1,26 @@
+rc  libapache2-mod-php7.1                   7.1.27-1+0~20190307202204.14+stretch~1.gbp7163d5 amd64        server-side, HTML-embedded scripting language (Apache 2 module)
+ii  php-common                              2:69+ubuntu19.04.1+deb.sury.org+1                all          Common files for PHP packages
+ii  php-curl                                2:7.3+69+ubuntu19.04.1+deb.sury.org+1            all          CURL module for PHP [default]
+ii  php-mbstring                            2:7.3+69+ubuntu19.04.1+deb.sury.org+1            all          MBSTRING module for PHP [default]
+ii  php-mysql                               2:7.3+69+ubuntu19.04.1+deb.sury.org+1            all          MySQL module for PHP [default]
+ii  php7.0-common                           7.0.33-5+ubuntu19.04.1+deb.sury.org+1            amd64        documentation, examples and common module for PHP
+ii  php7.0-mbstring                         7.0.33-5+ubuntu19.04.1+deb.sury.org+1            amd64        MBSTRING module for PHP
+ii  php7.0-mysql                            7.0.33-5+ubuntu19.04.1+deb.sury.org+1            amd64        MySQL module for PHP
+rc  php7.1-cli                              7.1.27-1+0~20190307202204.14+stretch~1.gbp7163d5 amd64        command-line interpreter for the PHP scripting language
+ii  php7.1-common                           7.1.27-1+ubuntu19.04.1+deb.sury.org+1            amd64        documentation, examples and common module for PHP
+rc  php7.1-json                             7.1.27-1+0~20190307202204.14+stretch~1.gbp7163d5 amd64        JSON module for PHP
+ii  php7.1-mbstring                         7.1.27-1+ubuntu19.04.1+deb.sury.org+1            amd64        MBSTRING module for PHP
+ii  php7.1-mcrypt                           7.1.27-1+ubuntu19.04.1+deb.sury.org+1            amd64        libmcrypt module for PHP
+ii  php7.1-mysql                            7.1.27-1+ubuntu19.04.1+deb.sury.org+1            amd64        MySQL module for PHP
+rc  php7.1-opcache                          7.1.27-1+0~20190307202204.14+stretch~1.gbp7163d5 amd64        Zend OpCache module for PHP
+rc  php7.1-readline                         7.1.27-1+0~20190307202204.14+stretch~1.gbp7163d5 amd64        readline module for PHP
+ii  php7.1-xml                              7.1.27-1+ubuntu19.04.1+deb.sury.org+1            amd64        DOM, SimpleXML, WDDX, XML, and XSL module for PHP
+rc  php7.3-cli                              7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        command-line interpreter for the PHP scripting language
+ii  php7.3-common                           7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        documentation, examples and common module for PHP
+ii  php7.3-curl                             7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        CURL module for PHP
+rc  php7.3-json                             7.3.3-1+ubuntu19.04.1+deb.sury.org+1             amd64        JSON module for PHP
+ii  php7.3-mbstring                         7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        MBSTRING module for PHP
+ii  php7.3-mysql                            7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        MySQL module for PHP
+rc  php7.3-opcache                          7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        Zend OpCache module for PHP
+rc  php7.3-readline                         7.3.3-1+ubuntu19.04.1+deb.sury.org+1             amd64        readline module for PHP
+ii  php7.3-xml                              7.3.3-1+0~20190307202245.32+stretch~1.gbp32ebb2  amd64        DOM, SimpleXML, WDDX, XML, and XSL module for PHP
