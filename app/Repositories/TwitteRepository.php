@@ -26,6 +26,7 @@ class TwitteRepository
         
     }
 
+    //Salva twittes a partir do comando no banco de dados
     public function index()
     {
         //Salvando twitte no banco de dados
@@ -138,7 +139,7 @@ class TwitteRepository
         return $tweetes->toJson();
 
     }
-    
+
     // Retorne todas as localidades únicas dos tweets que estejam disponíveis na
     //sua extração. Se houverem tweets sem localização, o termo "Sem Localização" é o
     //termo que deve ser retornado.
